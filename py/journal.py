@@ -28,7 +28,7 @@ def minutes_passed_since(timestamp):
         return None
 
 def notify_sound():
-    os.system("play -q ~/meet-message-sound-1.mp3")
+    os.system("play -q ~/meet-message-sound-1.mp3 &")
 
 date_string = datetime.date.today().strftime("%Y-%m-%d")
 time_string = datetime.datetime.now().strftime("%H:%M:%S")
