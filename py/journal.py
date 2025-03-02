@@ -9,6 +9,12 @@ import os
 import datetime
 import re
 import math
+import sys
+
+new_header=False
+if(len(sys.argv)>1):
+    if(sys.argv[1]=="-n"):
+        new_header=True
 
 txt_directory="my_journal_txt"
 new_date_header_after=21 #minutes
@@ -53,6 +59,6 @@ txt_toappend=input()
 with open(f"{txt_directory}/{txt_filename}", "a") as myfile:
     if(txt_file_exists):
         myfile.write(f"""\n""")
-    if(not recently_written):
-        myfile.write(f"""---- {time_string} ----\n""")
+    if( (not recently_written) or new_header):
+        myfile.write(f"""\n---- {time_string} ----\n""")
     myfile.write(f"""{txt_toappend}""")
