@@ -1,6 +1,5 @@
-# A time-log .txt journal script that writes down the timestamp
-# the line was echoed to the file and the text from the
-# input under the timestamp.
+# The Python script prompts you to write a line of text which later gets appended to a text file with the format [YYYY-MM-DD].txt with Y being year, M being month and D being day. There will also be a time header above the newly written line if the .txt file is empty or if the last line in the file was written more than 10 minutes ago.
+# notify_sound() may not work if the file in it's command string is missing
 #
 # Written by jnk181
 # Tested Python versions: Python 3.13.1
